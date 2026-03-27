@@ -1955,8 +1955,8 @@
     //   {{message}}     — additional details
     var EMAILJS_TEMPLATE_ID = 'template_ba2bj9f';
 
-    // Initialize EmailJS with your public key
-    emailjs.init(EMAILJS_PUBLIC_KEY);
+    // Initialize EmailJS with your public key (v4 object syntax)
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
     // ================================================================
     // BOOKING FORM LOGIC
