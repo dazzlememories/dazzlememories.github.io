@@ -478,11 +478,12 @@
       border-width: 0 2px 2px 0;
     }
 
-    /* Real photo replaces placeholder — same dimensions */
+    /* Real photo replaces placeholder */
     .about-image-wrap img {
       width: 100%;
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
+      object-position: center;
       border-radius: var(--radius);
       display: block;
     }
@@ -545,8 +546,7 @@
         grid-template-columns: 1fr;
         gap: 3rem;
       }
-      .about-image-placeholder,
-      .about-image-wrap img {
+      .about-image-placeholder {
         aspect-ratio: 16 / 9;
       }
     }
@@ -1411,7 +1411,7 @@
             >
             <div class="gallery-overlay" aria-hidden="true">
               <span class="gallery-caption en">Wood Backdrop</span>
-              <span class="gallery-caption es">Telón de Madera</span>
+              <span class="gallery-caption es">Fondo de madera</span>
             </div>
           </div>
 
@@ -1421,8 +1421,8 @@
               alt="8x8 wood backdrop setup at a Dazzle Memories event"
             >
             <div class="gallery-overlay" aria-hidden="true">
-              <span class="gallery-caption en">Wood Backdrop</span>
-              <span class="gallery-caption es">Telón de Madera</span>
+              <span class="gallery-caption en">Curtain Backdrop</span>
+              <span class="gallery-caption es">Fondo de cortina</span>
             </div>
           </div>
 
