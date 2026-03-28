@@ -478,6 +478,15 @@
       border-width: 0 2px 2px 0;
     }
 
+    /* Real photo replaces placeholder — same dimensions */
+    .about-image-wrap img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: var(--radius);
+      display: block;
+    }
+
     .about-image-placeholder {
       width: 100%;
       aspect-ratio: 4 / 5;
@@ -536,7 +545,8 @@
         grid-template-columns: 1fr;
         gap: 3rem;
       }
-      .about-image-placeholder {
+      .about-image-placeholder,
+      .about-image-wrap img {
         aspect-ratio: 16 / 9;
       }
     }
@@ -1218,13 +1228,13 @@
         <span class="hero-eyebrow" aria-hidden="true">✦ Dazzle Memories ✦</span>
 
         <h1 class="hero-title" id="hero-title">
-          <span class="en"><em>Creating</em> Magical<br>Memories</span>
-          <span class="es"><em>Creando</em> Momentos<br>Mágicos</span>
+          <span class="en"><em>Creating</em> Dazzling<br>Memories</span>
+          <span class="es"><em>Creando</em> Momentos<br>Deslumbrantes</span>
         </h1>
 
         <p class="hero-subtitle">
-          <span class="en">Premium party rental décor for your most special events — weddings, quinceañeras, birthdays, baby showers &amp; more.</span>
-          <span class="es">Decoración de lujo en renta para tus eventos más especiales — bodas, quinceañeras, cumpleaños, baby showers y más.</span>
+          <span class="en">Dependable party rentals for life's special moments - weddings, quinceañeras, birthdays, baby showers &amp; more.</span>
+          <span class="es">Renta confiable de artículos para los momentos especiales de tu vida — bodas, quinceañeras, cumpleaños, baby showers y más.</span>
         </p>
 
         <p class="hero-area" aria-label="Service area">
@@ -1253,60 +1263,34 @@
       <div class="container">
         <div class="about-inner">
 
-          <!-- Image placeholder (swap src with a real photo later) -->
           <div class="about-image-wrap">
-            <div
-              class="about-image-placeholder"
-              role="img"
-              aria-label="Dazzle Memories — business photo coming soon"
+            <img
+              src="images/business.jpeg"
+              alt="Dazzle Memories owner with party rental décor setup in Forney, TX"
             >
-              <span class="ph-icon" aria-hidden="true">📸</span>
-              <span class="en">Business photo coming soon</span>
-              <span class="es">Foto del negocio próximamente</span>
-            </div>
           </div>
 
           <!-- Text -->
           <div class="about-text">
-            <p class="section-label" aria-hidden="true">
-              ✦ <span class="en">Our Story</span><span class="es">Nuestra Historia</span>
-            </p>
             <h2 class="section-title" id="about-title">
-              <span class="en">We Make Your Vision Come to Life</span>
-              <span class="es">Hacemos Tu Visión Realidad</span>
+              <span class="en">Fair Pricing. Dependable Service</span>
+              <span class="es">Precios Justos. Servicio Confiable</span>
             </h2>
             <div class="gold-divider" aria-hidden="true"></div>
 
             <p>
-              <span class="en">At Dazzle Memories, we believe every celebration deserves to be extraordinary. Based in Forney, TX, we are a family-owned party rental business with a passion for creating beautiful, unforgettable events.</span>
-              <span class="es">En Dazzle Memories, creemos que cada celebración merece ser extraordinaria. Con sede en Forney, TX, somos un negocio familiar de renta de artículos para fiestas, apasionados por crear eventos hermosos e inolvidables.</span>
+              <span class="en">At Dazzle Memories, we focus on providing reliable event rentals at fair prices. Based in Forney, TX, we are a family-owned business offering a variety of options for different occasions, with dependable delivery and a simple, hassle-free process so you can get what you need without added stress.</span>
+              <span class="es">En Dazzle Memories, nos enfocamos en ofrecer renta de artículos para eventos confiables y a precios justos. Con sede en Forney, TX, somos un negocio familiar que ofrece una variedad de opciones para diferentes ocasiones, con entregas puntuales y un proceso sencillo y sin complicaciones para que puedas obtener lo que necesitas sin estrés adicional.</span>
             </p>
             <p>
-              <span class="en">Whether you're planning a quinceañera, wedding, birthday, baby shower, or any special gathering, we bring the elegance and style that transform any space into a magical setting.</span>
-              <span class="es">Ya sea que estés planeando una quinceañera, boda, cumpleaños, baby shower o cualquier reunión especial, traemos la elegancia y el estilo que transforma cualquier espacio en un ambiente mágico.</span>
+              <span class="en">Whether you're planning a quinceañera, wedding, birthday, baby shower, or any other gathering, we offer what you need to set up your space the way you want it.</span>
+              <span class="es">Ya sea que estés planeando una quinceañera, boda, cumpleaños, baby shower o cualquier otra reunión, ofrecemos lo que necesitas para preparar tu espacio como lo deseas.</span>
             </p>
             <p>
-              <span class="en">Let us handle the décor — you focus on making memories.</span>
-              <span class="es">Déjanos encargarnos de la decoración — tú enfócate en crear recuerdos.</span>
+              <span class="en">We deliver and set everything up so you can focus on your event.</span>
+              <span class="es">Entregamos y dejamos todo listo para que tú te enfoques en tu evento.</span>
             </p>
 
-            <div class="about-stats">
-              <div class="stat">
-                <span class="stat-number">100+</span>
-                <span class="stat-label en">Happy Events</span>
-                <span class="stat-label es">Eventos Felices</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">6</span>
-                <span class="stat-label en">Rental Items</span>
-                <span class="stat-label es">Artículos en Renta</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">DFW</span>
-                <span class="stat-label en">Service Area</span>
-                <span class="stat-label es">Área de Servicio</span>
-              </div>
-            </div>
           </div>
 
         </div>
@@ -1329,10 +1313,7 @@
             <span class="es">Nuestra Colección de Renta</span>
           </h2>
           <div class="gold-divider" aria-hidden="true"></div>
-          <p class="section-subtitle">
-            <span class="en">Each piece is carefully maintained and delivered to make your event truly spectacular.</span>
-            <span class="es">Cada pieza está cuidadosamente mantenida y entregada para hacer tu evento verdaderamente espectacular.</span>
-          </p>
+        
         </div>
 
         <div class="services-grid">
@@ -1344,56 +1325,20 @@
               <span class="es">Números y Letras de Madera</span>
             </h3>
             <p>
-              <span class="en">4-foot tall illuminated wooden numbers and letters — the perfect statement piece for any celebration backdrop or photo opportunity.</span>
-              <span class="es">Números y letras de madera iluminadas de 4 pies de altura — la pieza ideal para el fondo de cualquier celebración o sesión de fotos.</span>
+              <span class="en">4-foot tall illuminated wooden numbers and letters to add a focal point to your event.</span>
+              <span class="es">Números y letras de madera iluminadas de 4 pies de altura para agregarle un punto de atención a tu evento.</span>
             </p>
           </article>
 
           <article class="service-card">
             <span class="service-icon" aria-hidden="true">⬜</span>
             <h3>
-              <span class="en">Wood Backdrop (8×8)</span>
-              <span class="es">Telón de Fondo de Madera (8×8)</span>
+              <span class="en">Backdrops and Props</span>
+              <span class="es">Fondos y Accessorios</span>
             </h3>
             <p>
-              <span class="en">A stunning 8×8 wood backdrop that creates a gorgeous focal point for photo walls, cake tables, and gift displays.</span>
-              <span class="es">Un impresionante telón de madera 8×8 que crea un hermoso punto focal para fotos, mesas de pastel y exhibiciones de regalos.</span>
-            </p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-icon" aria-hidden="true">⬡</span>
-            <h3>
-              <span class="en">Baby Cubes</span>
-              <span class="es">Cubos para Bebé</span>
-            </h3>
-            <p>
-              <span class="en">Adorable decorative baby cubes, perfect for baby showers, gender reveals, and first birthday parties.</span>
-              <span class="es">Adorables cubos decorativos para bebé, perfectos para baby showers, revelaciones de género y primeros cumpleaños.</span>
-            </p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-icon" aria-hidden="true">∥</span>
-            <h3>
-              <span class="en">Curtain Stand (10 ft)</span>
-              <span class="es">Soporte de Cortina (3 m)</span>
-            </h3>
-            <p>
-              <span class="en">A sleek 10-foot curtain stand to hang drapes, balloon garlands, and floral installations that frame your event beautifully.</span>
-              <span class="es">Un elegante soporte de cortina de 10 pies para colgar telas, guirnaldas de globos e instalaciones florales que enmarcan tu evento.</span>
-            </p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-icon" aria-hidden="true">∩</span>
-            <h3>
-              <span class="en">Arches (2 Sizes)</span>
-              <span class="es">Arcos (2 Tamaños)</span>
-            </h3>
-            <p>
-              <span class="en">Available in two sizes, our decorative arches are ideal for ceremony entrances, photo opportunities, and balloon displays.</span>
-              <span class="es">Disponibles en dos tamaños, nuestros arcos decorativos son ideales para entradas de ceremonias, sesiones de fotos y exhibiciones de globos.</span>
+              <span class="en">Different types of backdrops and props that help organize your space and create a clean setup for photos and displays.</span>
+              <span class="es">Diferentes tipos de fondos y accessorios que organizan tu espacio y crean un montaje ordenado para tus fotos y exhibiciones.</span>
             </p>
           </article>
 
@@ -1404,8 +1349,8 @@
               <span class="es">Guirnaldas de Globos</span>
             </h3>
             <p>
-              <span class="en">Custom balloon garlands in your chosen colors — a festive, eye-catching touch for any venue, arch, or backdrop.</span>
-              <span class="es">Guirnaldas de globos personalizadas en los colores de tu elección — un toque festivo y llamativo para cualquier lugar, arco o telón.</span>
+              <span class="en">Custom balloon garlands in your chosen colors to enhance your space.</span>
+              <span class="es">Guirnaldas de globos personalizadas en los colores de tu elección para complementar tu espacio.</span>
             </p>
           </article>
 
@@ -1430,110 +1375,76 @@
           </h2>
           <div class="gold-divider" aria-hidden="true"></div>
           <p class="section-subtitle">
-            <span class="en">Real events, real magic. Photos coming soon — follow us on Instagram <strong>@dazzlememories</strong> for a live look!</span>
-            <span class="es">Eventos reales, magia real. Fotos próximamente — ¡síguenos en Instagram <strong>@dazzlememories</strong> para ver más!</span>
+            <span class="en">Follow us on Instagram <strong>@dazzlememories</strong> for more photos!</span>
+            <span class="es">¡Síguenos en Instagram <strong>@dazzlememories</strong> para ver más fotos!</span>
           </p>
         </div>
 
-        <!-- Gallery grid — replace .gallery-placeholder divs with <img> tags when real photos are ready -->
         <div class="gallery-grid">
 
           <div class="gallery-item">
-            <div class="gallery-placeholder" role="img" aria-label="Event photo — coming soon">
-              <span class="ph-icon" aria-hidden="true">✦</span>
-              <span class="en">Photo Coming Soon</span>
-              <span class="es">Foto Próximamente</span>
-            </div>
+            <img
+              src="images/marquee1.jpeg"
+              alt="4-foot tall illuminated wood marquee numbers at a Dazzle Memories event"
+            >
             <div class="gallery-overlay" aria-hidden="true">
-              <span class="gallery-caption">Dazzle Memories</span>
+              <span class="gallery-caption en">Marquee Numbers</span>
+              <span class="gallery-caption es">Números de Madera</span>
             </div>
           </div>
 
           <div class="gallery-item">
-            <div class="gallery-placeholder" role="img" aria-label="Event photo — coming soon">
-              <span class="ph-icon" aria-hidden="true">✦</span>
-              <span class="en">Photo Coming Soon</span>
-              <span class="es">Foto Próximamente</span>
-            </div>
+            <img
+              src="images/marquee2.jpeg"
+              alt="4-foot tall illuminated wood marquee letters at a Dazzle Memories event"
+            >
             <div class="gallery-overlay" aria-hidden="true">
-              <span class="gallery-caption">Dazzle Memories</span>
+              <span class="gallery-caption en">Marquee Letters</span>
+              <span class="gallery-caption es">Letras de Madera</span>
             </div>
           </div>
 
           <div class="gallery-item">
-            <div class="gallery-placeholder" role="img" aria-label="Event photo — coming soon">
-              <span class="ph-icon" aria-hidden="true">✦</span>
-              <span class="en">Photo Coming Soon</span>
-              <span class="es">Foto Próximamente</span>
-            </div>
+            <img
+              src="images/backdrop1.jpeg"
+              alt="8x8 wood backdrop decorated for a Dazzle Memories celebration"
+            >
             <div class="gallery-overlay" aria-hidden="true">
-              <span class="gallery-caption">Dazzle Memories</span>
+              <span class="gallery-caption en">Wood Backdrop</span>
+              <span class="gallery-caption es">Telón de Madera</span>
             </div>
           </div>
 
           <div class="gallery-item">
-            <div class="gallery-placeholder" role="img" aria-label="Event photo — coming soon">
-              <span class="ph-icon" aria-hidden="true">✦</span>
-              <span class="en">Photo Coming Soon</span>
-              <span class="es">Foto Próximamente</span>
-            </div>
+            <img
+              src="images/backdrop2.jpg"
+              alt="8x8 wood backdrop setup at a Dazzle Memories event"
+            >
             <div class="gallery-overlay" aria-hidden="true">
-              <span class="gallery-caption">Dazzle Memories</span>
+              <span class="gallery-caption en">Wood Backdrop</span>
+              <span class="gallery-caption es">Telón de Madera</span>
             </div>
           </div>
 
           <div class="gallery-item">
-            <div class="gallery-placeholder" role="img" aria-label="Event photo — coming soon">
-              <span class="ph-icon" aria-hidden="true">✦</span>
-              <span class="en">Photo Coming Soon</span>
-              <span class="es">Foto Próximamente</span>
-            </div>
+            <img
+              src="images/garland1.jpeg"
+              alt="Custom balloon garland by Dazzle Memories"
+            >
             <div class="gallery-overlay" aria-hidden="true">
-              <span class="gallery-caption">Dazzle Memories</span>
+              <span class="gallery-caption en">Balloon Garland</span>
+              <span class="gallery-caption es">Guirnalda de Globos</span>
             </div>
           </div>
 
           <div class="gallery-item">
-            <div class="gallery-placeholder" role="img" aria-label="Event photo — coming soon">
-              <span class="ph-icon" aria-hidden="true">✦</span>
-              <span class="en">Photo Coming Soon</span>
-              <span class="es">Foto Próximamente</span>
-            </div>
+            <img
+              src="images/garland2.jpeg"
+              alt="Colorful custom balloon garland by Dazzle Memories"
+            >
             <div class="gallery-overlay" aria-hidden="true">
-              <span class="gallery-caption">Dazzle Memories</span>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <div class="gallery-placeholder" role="img" aria-label="Event photo — coming soon">
-              <span class="ph-icon" aria-hidden="true">✦</span>
-              <span class="en">Photo Coming Soon</span>
-              <span class="es">Foto Próximamente</span>
-            </div>
-            <div class="gallery-overlay" aria-hidden="true">
-              <span class="gallery-caption">Dazzle Memories</span>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <div class="gallery-placeholder" role="img" aria-label="Event photo — coming soon">
-              <span class="ph-icon" aria-hidden="true">✦</span>
-              <span class="en">Photo Coming Soon</span>
-              <span class="es">Foto Próximamente</span>
-            </div>
-            <div class="gallery-overlay" aria-hidden="true">
-              <span class="gallery-caption">Dazzle Memories</span>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <div class="gallery-placeholder" role="img" aria-label="Event photo — coming soon">
-              <span class="ph-icon" aria-hidden="true">✦</span>
-              <span class="en">Photo Coming Soon</span>
-              <span class="es">Foto Próximamente</span>
-            </div>
-            <div class="gallery-overlay" aria-hidden="true">
-              <span class="gallery-caption">Dazzle Memories</span>
+              <span class="gallery-caption en">Balloon Garland</span>
+              <span class="gallery-caption es">Guirnalda de Globos</span>
             </div>
           </div>
 
@@ -1552,8 +1463,8 @@
           ✦ <span class="en">Get in Touch</span><span class="es">Contáctanos</span>
         </p>
         <h2 class="section-title" id="contact-title">
-          <span class="en">Let's Make Your Event Unforgettable</span>
-          <span class="es">Hagamos Tu Evento Inolvidable</span>
+          <span class="en">Let's Plan Your Setup</span>
+          <span class="es">Vamos a planear tu montaje</span>
         </h2>
         <div class="gold-divider" aria-hidden="true"></div>
 
@@ -1807,8 +1718,8 @@
                     placeholder="Tell us about your event, items you're interested in, number of guests, color theme, etc."
                   ></textarea>
                   <span id="messageHint" style="font-size:0.72rem; color:var(--muted);">
-                    <span class="en">Items of interest, guest count, color theme, etc.</span>
-                    <span class="es">Artículos de interés, número de invitados, tema de color, etc.</span>
+                    <span class="en">Items of interest, color theme, event theme, etc.</span>
+                    <span class="es">Artículos de interés, tema de color, tema del evento, etc.</span>
                   </span>
                 </div>
 
@@ -1828,8 +1739,8 @@
                 <span class="es">¡Mensaje Recibido!</span>
               </h4>
               <p>
-                <span class="en">Thank you! We'll be in touch with you shortly to confirm your booking details.</span>
-                <span class="es">¡Gracias! Nos pondremos en contacto contigo pronto para confirmar los detalles de tu reservación.</span>
+                <span class="en">Thank you! We'll be in touch with you shortly to talk about your event.</span>
+                <span class="es">¡Gracias! Nos pondremos en contacto contigo pronto para hablar sobre tu evento.</span>
               </p>
             </div>
 
@@ -1850,8 +1761,8 @@
 
       <div class="footer-logo" aria-label="Dazzle Memories">Dazzle Memories</div>
       <p class="footer-tagline">
-        <span class="en">Creating magical moments across DFW</span>
-        <span class="es">Creando momentos mágicos en el DFW</span>
+        <span class="en">Creating dazzling moments across DFW</span>
+        <span class="es">Creando momentos deslumbrantes en DFW</span>
       </p>
 
       <ul class="footer-links" role="list">
