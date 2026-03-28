@@ -1700,6 +1700,8 @@
                     id="fieldAddress"
                     name="event_address"
                     autocomplete="street-address"
+                    data-placeholder-en="123 Main St, Forney, TX"
+                    data-placeholder-es="Calle 123, Forney, TX"
                     placeholder="123 Main St, Forney, TX"
                   >
                 </div>
@@ -1714,13 +1716,10 @@
                     id="fieldMessage"
                     name="message"
                     rows="4"
-                    aria-describedby="messageHint"
-                    placeholder="Tell us about your event, items you're interested in, number of guests, color theme, etc."
+                    data-placeholder-en="Tell us about your event — items you're interested in, color theme, etc."
+                    data-placeholder-es="Cuéntanos sobre tu evento — artículos de interés, tema de color, etc."
+                    placeholder="Tell us about your event — items you're interested in, color theme, etc."
                   ></textarea>
-                  <span id="messageHint" style="font-size:0.72rem; color:var(--muted);">
-                    <span class="en">Items of interest, color theme, event theme, etc.</span>
-                    <span class="es">Artículos de interés, tema de color, tema del evento, etc.</span>
-                  </span>
                 </div>
 
               </div><!-- /form-grid -->
@@ -1784,6 +1783,15 @@
 
   <script>
     // === LANGUAGE TOGGLE ===
+
+    // Updates placeholder text on any input/textarea with data-placeholder-en/es attributes
+    function updateFormPlaceholders(lang) {
+      document.querySelectorAll('[data-placeholder-en]').forEach(function(el) {
+        var text = el.getAttribute('data-placeholder-' + lang);
+        if (text) el.placeholder = text;
+      });
+    }
+
     function setLang(lang) {
       document.documentElement.setAttribute('data-lang', lang);
       document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
@@ -1793,6 +1801,7 @@
       btnEs.classList.toggle('active', lang === 'es');
       btnEn.setAttribute('aria-pressed', String(lang === 'en'));
       btnEs.setAttribute('aria-pressed', String(lang === 'es'));
+      updateFormPlaceholders(lang);
       try { localStorage.setItem('dm-lang', lang); } catch(e) {}
     }
 
@@ -1800,7 +1809,10 @@
     try {
       var saved = localStorage.getItem('dm-lang');
       if (saved === 'es') setLang('es');
-    } catch(e) {}
+      else updateFormPlaceholders('en');
+    } catch(e) {
+      updateFormPlaceholders('en');
+    }
 
     // === STICKY NAVBAR ===
     var navbar = document.getElementById('navbar');
